@@ -1,0 +1,121 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{colortbl}
+
+%opening
+\title{Astronomie Praktikum - Theodolit}
+\author{Ramon Gfeller, Andreas Zuber}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+Ziel dieses Versuches war, den Stoff aus der Vorlesung ``Astronomie I'' in die Praxis
+umzusetzen. Im ersten Teil wurden zwei Sterne ausgewählt, welche wir anschliessend mit
+dem Thodoliten am Himmel lokalisierten. Im zweiten Teil wurden die Koordinaten zwei
+zufälliger Sterne gemessen um dann in einem Sternkatalog deren Namen nachzuschlagen.
+\end{abstract}
+
+
+\section{Ausrüstung und Software}
+\begin{itemize}
+ \item \textbf{Theodolit} (DKMZ-AE 249231) zur Messung von Azimut und Elevation in GON (400ster Bruchteil eines Kreises)
+ \item \textbf{Wetterdaten} der Station auf dem ExWi \cite{Wetter}
+ \item Programm \textbf{tktrf} der UniBe zur Umrechnung der Koordinaten
+    (Äquator-Frühlingspunkt-System $\leftrightarrow$ Horizont-Ortsmeridian-System).
+    Zusätzlich korrigierte das Programm anhand von Luftdruck, Temperatur und Luftfeuchtigkeit die Refraktion
+ \item Programm \textbf{Stellarium}\cite{Stellarium} für die Suche zurzeit sichtbarer Sterne
+ \item \textbf{Simbad}\cite{Simbad} für die Bestimmung eines Sterns anhand seiner Koordinaten
+ \item \textbf{Zeitdurchsage} (Nr. 161) der Schweiz
+ \item \textbf{Stoppuhr} zur genauen ($\pm0.5s$) Bestimmung des Messzeitpunktes
+\end{itemize}
+
+
+\section{Vorbereitung}
+Als Vorbereitung haben wir uns mit den Programmen welche zur Auswertung benutzt werden vertraut gemacht sowie
+mehrere Sterne für die Beobachtung mittels Stellarium\cite{Stellarium} ausgewählt. Dabei war es wichtig das diese
+ausgewählten Objekte für die dauer der Messungen unter einem günstigen Winkel sichtbar sind und sich keine hellen Objekte
+wie der Mond in unmittelbarer nähe befinden.
+
+\subsection{Sterne für die Beobachtung}
+
+
+\definecolor{tcA}{rgb}{0.627451,0.627451,0.643137}
+\begin{center}
+\begin{tabular}{llll}
+% use packages: color,colortbl
+\rowcolor{tcA}
+\textbf{Stern} & \textbf{HIP} & \textbf{Rektaszension} & \textbf{Deklination}\\
+Capella & 24608 & 5h 16m 41.5s & +45\textdegree  59' 51.0''\\
+Hamal ($\alpha$ Ari) & 9884 & 2h 07m 10.5s & +23\textdegree  31' 57''\\
+Almaak ($\gamma$ 1 And) & 9640A & 2h 03m 54.0s & +42\textdegree  19' 47.0''\\
+Mirphak ($\alpha$ Per) & 15863 & 3h 24m 19.4s & +49\textdegree  51' 40''
+\end{tabular}
+\end{center}
+
+
+
+\section{Durchführung der Messung}
+Für die Zeitmessungen wurde UTC verwendet, die Umrechnung auf UT1 war nicht nötig, da
+der Fehler kleiner war als die Ungenauigkeit des Theodoliten.
+
+Der Theodolit wurde auf das Stativ auf dem Dach des ExWi geschraubt und mit der
+integrierten Wasserwaage und den Drehknöpfen möglichst horizontal ausgerichtet.
+
+Das Ablesen der Messungen war etwas knifflig. Durch eine Lupe konnten die Skalen
+betrachtet werden. Nun musste je nachdem ob Azimut oder Elevation abgelesen wurde der
+obere oder untere bewegliche Strich mit einem Drehknopf zwischen die beiden fixen Striche
+geschoben werden.
+
+Durch das Okular waren mehrere Fadenkreuze sichtbar. Vermutlich wurde einmal (Teil 2,
+Stern 2) nicht das richtige Fadenkreuz verwendet, weshalb der Stern nicht bestimmt werden
+konnte.
+
+
+\subsection{Orientierung am Polarstern}
+Als Referenzpunkt für die Messungen diente uns der Polarstern. Bei der ersten Messung gieng es also
+darum den Polarstern ins Fadenkreuz zu bringen und den Theodoliten entsprechend den Koordinaten einzustellen.
+
+\definecolor{tcA}{rgb}{0.627451,0.627451,0.643137}
+\begin{center}
+\begin{tabular}{lll}
+% use packages: color,colortbl
+\rowcolor{tcA}
+\textbf{Polarstern (FK907)} & & \\
+Zeit & 16:50 & \\
+Koordinaten (Grad) & 0 58 38.10 & +47 03 25.55 \\
+Koordinaten (GON) & 1.06583 & 47.7142
+\end{tabular}
+\end{center}
+
+
+\subsection{Messung 1}
+Bei dieser Messung haben wir zwei der von uns ausgewählten Sterne Beobachtet. Zuerst
+haben wir die Koordinaten des Sterns zur Beobachtungszeit mittels dem Programm ``tktrf''
+berechnet.
+
+In einem zweiten Schritt haben wir den Theodoliten auf die Koordinaten eingestellt und den
+Durchgang des Sterns durch das Fadenkreuz beobachtet.
+
+beide Messungen waren erfolgreich. Beim zweiten Stern gab es eine kleine Abweichung vermutlich
+auf Grund der Eigenbewegung des Sterns welche wir nicht berücksichtigt hatten.
+
+TABLE
+
+\subsection{Messung 2}
+
+
+\begin{thebibliography}{99}
+
+\bibitem{Wetter} \verb+http://www.iapmw.unibe.ch/research/projects/meteo/latest_exwi.html+
+
+\bibitem{Stellarium} \verb+http://www.stellarium.org/+
+
+\bibitem{Simbad} \verb+http://simbad.u-strasbg.fr/simbad/+
+
+\end{thebibliography}
+
+\end{document}
